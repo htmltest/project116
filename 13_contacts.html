@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>РИЭПП</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="lang">RU <a href="#">EN</a></div>
+
+                        <div class="header-btn"><a href="#" class="btn-2">Электронное обращение</a></div>
+                    </div>
+                </header>
+
+                <div class="nav">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Об институте<span class="nav-arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Руководство</a></li>
+                                        <li><a href="#">Структура</a></li>
+                                        <li><a href="#">Работа в РИЭПП</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Кадры</a></li>
+                                <li>
+                                    <a href="#">Деятельность института<span class="nav-arrow"></span></a>
+                                    <ul>
+                                        <li><a href="#">События</a></li>
+                                        <li><a href="#">Направления деятельности</a></li>
+                                        <li><a href="#">Основные результаты</a></li>
+                                        <li><a href="#">Издания РИЭПП</a></li>
+                                        <li><a href="#">Участие в ФЦП</a></li>
+                                        <li><a href="#">Вебинары</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Противодействие коррупции</a></li>
+                                <li><a href="#">Сведения о доходах</a></li>
+                                <li class="active"><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="search">
+                            <form action="#" method="post">
+                                <div class="search-input"><input type="text" name="search" value="" class="required" /></div>
+                                <div class="search-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+                    <div class="breadcrumbs"><a href="#">РИЭПП</a> -&gt; Контакты</div>
+
+                    <!-- content -->
+                    <div class="content">
+                        <h1>Контакты</h1>
+
+                        <div class="contacts-data">
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Адрес института:</h4></div>
+                                <div class="contacts-data-value">105064, Российская Федерация, Москва, ул. Земляной вал, 50А, стpоение 6</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Телефоны:</h4></div>
+                                <div class="contacts-data-value">
+                                    <p>+7 (495) 916-28-84 — секретарь</p>
+                                    <p>+7 (495) 916-17-12 — отдел кадров</p>
+                                    <p>+7 (495) 916-04-87 — издательский отдел</p>
+                                    <p>+7 (495) 916-28-29 — бухгалтерия</p>
+                                </div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Факс:</h4></div>
+                                <div class="contacts-data-value">+7 (495) 916-13-01</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Электронная почта:</h4></div>
+                                <div class="contacts-data-value">info@riep.ru</div>
+                            </div>
+                        </div>
+
+                        <h3>СХЕМА ПРОЕЗДА</h3>
+
+                        <div class="contacts-map">
+                            <div id="map"></div>
+                            <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                            <script>
+                                ymaps.ready(init);
+
+                                var myMap;
+                                var coords = [55.751660, 37.653900];
+
+                                function init() {
+                                    myMap = new ymaps.Map('map', {
+                                        center: coords,
+                                        zoom: 17,
+                                        controls: []
+                                    });
+
+                                    myMap.controls.add('zoomControl');
+                                    myMap.behaviors.disable('scrollZoom');
+
+                                    var myPlacemark = new ymaps.Placemark(coords, {}, {});
+                                    myMap.geoObjects.add(myPlacemark);
+                                    myMap.setCenter(coords);
+                                }
+                            </script>
+                        </div>
+
+                        <p>До станции метро Чкаловская, выход к ул. Земляной Вал (Садовое кольцо). Далее пройти налево по ул. Земляной Вал (в сторону Яузы), через подземный переход перейти на другую сторону улицы, пройти до дома № 48 с приметной 7-этажной аркой. Войти в арку, пересечь двор до конца и повернуть налево. 4х-этажный дом со стеклянным вестибюлем на уровне второго этажа. Подняться на последний этаж.</p>
+                        <p>Городским транспортом по внутренней стороне Садового кольца: троллейбус "Б", остановка "Улица Воронцово поле" (следующая после Курского вокзала), далее по ходу движения пройти до дома № 48 с приметной 7-этажной аркой. Войти в арку, пересечь двор до конца и повернуть налево. 4х-этажный дом со стеклянным вестибюлем на уровне второго этажа. Подняться на последний этаж.</p>
+
+                        <h3>РЕКВИЗИТЫ</h3>
+                        <div class="contacts-data">
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>НАЗВАНИЕ</h4></div>
+                                <div class="contacts-data-value">Федеральное государственное бюджетное учреждение "Российский научно-исследовательский институт экономики, политики и права в научно-технической сфере" (РИЭПП)</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ИНН/КПП</h4></div>
+                                <div class="contacts-data-value">7709303128 / 770901001</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>АДРЕС</h4></div>
+                                <div class="contacts-data-value">105064, г. Москва, ул. Земляной Вал, д.50А, стр.6.</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ОГРН</h4></div>
+                                <div class="contacts-data-value">1037739215106 Дата присвоения: 25.01.2003</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Р/с</h4></div>
+                                <div class="contacts-data-value">40501810845252000079 ГУ Банка России по ЦФО</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Л/с</h4></div>
+                                <div class="contacts-data-value">20736X97210 (буква "Х" - английская) УФК по гор. Москве</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>БИК</h4></div>
+                                <div class="contacts-data-value">44525000</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ОКАТО</h4></div>
+                                <div class="contacts-data-value">45286580000</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ОКПО</h4></div>
+                                <div class="contacts-data-value">52643210</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ОКВЭД</h4></div>
+                                <div class="contacts-data-value">72.20</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>ОКТМО</h4></div>
+                                <div class="contacts-data-value">45381000</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>И.О. директора</h4></div>
+                                <div class="contacts-data-value">Гусев Александр Борисович, тел. (495) 916-28-84</div>
+                            </div>
+                            <div class="contacts-data-row">
+                                <div class="contacts-data-name"><h4>Главный бухгалтер</h4></div>
+                                <div class="contacts-data-value">Козловцева Людмила Алексеевна, тел. (495) 916-28-29</div>
+                            </div>
+                        </div>
+                        <div class="contacts-btn">
+                            <a href="#" class="btn-1">Реквизиты (pdf)</a>
+                        </div>
+                    </div>
+                    <!-- content END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+                <div class="footer-left">
+                    <div class="footer-logo"></div>
+                    <div class="copyrights">Copyright © 2018. РИЭПП.<br /> Все права защищены.</div>
+                </div>
+
+                <div class="footer-contacts">
+                    <div class="footer-phone"><a href="tel:+7 (495) 916-28-84">+7 (495) 916-28-84</a></div>
+                    <div class="footer-email"><a href="mailto:info@riep.ru">info@riep.ru</a></div>
+                    <div class="footer-address">105064, Российская Федерация<br /> Москва, ул. Земляной вал, 50А, стpоение 6.</div>
+                </div>
+
+                <div class="footer-menu">
+                    <p><a href="#">Карта сайта</a></p>
+                    <p><a href="#">Условия использования информации</a></p>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-lang">RU <a href="#">EN</a></div>
+                    <div class="developer">
+                        <a href="#" target="_blank">
+                            <span>Разработано в студии</span>
+                            <img src="images/bilingo.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
