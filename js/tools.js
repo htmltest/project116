@@ -67,12 +67,12 @@ $(document).ready(function() {
     });
 
     $('.events-filter-all').click(function(e) {
-        $('.events-filter input').prop('checked', true);
+        $('.events-filter-types input').prop('checked', true);
         e.preventDefault();
     });
 
     $('.events-filter-clear').click(function(e) {
-        $('.events-filter input').prop('checked', false);
+        $('.events-filter-types input').prop('checked', false);
         e.preventDefault();
     });
 
