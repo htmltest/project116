@@ -78,10 +78,11 @@ blockquote h4 {margin:0}
 .pager-next {background-image:url(../images/pager-next.png)}
 .pager-prev:hover,
 .pager-next:hover {background-color:#6fc0b4}
-.pager-content {display:inline-block; vertical-align:top; min-width:430px; margin:0 4px}
-.pager-content a {display:inline-block; vertical-align:top; width:50px; height:49px; margin:0 4px; color:#000; font-weight:bold; font-size:14px; line-height:49px; letter-spacing:0; transition:all 0.2s; text-decoration:none}
+.pager-content {display:inline-block; vertical-align:top; min-width:430px}
+.pager-content a {display:inline-block; vertical-align:top; width:50px; height:49px; color:#000; font-weight:bold; font-size:14px; line-height:49px; letter-spacing:0; transition:all 0.2s; text-decoration:none}
 .pager-content a:hover {color:#e70535}
 .pager-content a.active {color:#fff; background:#6fc0b4}
+.pager-content span {display:inline-block; vertical-align:top; width:40px; height:49px; color:#000; font-weight:bold; font-size:14px; line-height:49px; letter-spacing:0}
 
 .container {max-width:1170px; margin:0 auto; padding:0 15px}
 .container::after {content:""; display:block; clear:both}
