@@ -57,4 +57,23 @@ $(document).ready(function() {
 
     });
 
+    $('.events-filter-years').slick({
+        dots: false,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
+
+    $('.events-filter-all').click(function(e) {
+        $('.events-filter input').prop('checked', true);
+        e.preventDefault();
+    });
+
+    $('.events-filter-clear').click(function(e) {
+        $('.events-filter input').prop('checked', false);
+        e.preventDefault();
+    });
+
 });
