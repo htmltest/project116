@@ -57,14 +57,20 @@ $(document).ready(function() {
 
     });
 
-    $('.events-filter-years').slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
-    });
+
+    if ($('.events-filter-years').length > 0) {
+        var eventsYear = $('.events-filter-years input').index($('.events-filter-years input:checked'));
+
+        $('.events-filter-years').slick({
+            dots: false,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: eventsYear,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+    }
 
     $('.events-filter-all').click(function(e) {
         $('.events-filter-types input').prop('checked', true);
@@ -73,6 +79,29 @@ $(document).ready(function() {
 
     $('.events-filter-clear').click(function(e) {
         $('.events-filter-types input').prop('checked', false);
+        e.preventDefault();
+    });
+
+    $('.vacancy-header').click(function(e) {
+        $(this).parents().filter('.vacancy').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $('.results-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.results-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = $('.results-menu ul li').index(curLi);
+            $('.results-tab').stop(true, true);
+            if ($('.results-tab:visible').length > 0) {
+                $('.results-tab:visible').fadeOut(200, function() {
+                    $('.results-tab').eq(curIndex).fadeIn(200);
+                });
+            } else {
+                $('.results-tab').eq(curIndex).fadeIn(200);
+            }
+        }
         e.preventDefault();
     });
 
