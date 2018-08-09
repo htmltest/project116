@@ -190,6 +190,29 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.feedback-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.feedback-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = $('.feedback-menu ul li').index(curLi);
+            $('.feedback-tab').stop(true, true);
+            if ($('.feedback-tab:visible').length > 0) {
+                $('.feedback-tab:visible').fadeOut(200, function() {
+                    $('.feedback-tab').eq(curIndex).fadeIn(200);
+                });
+            } else {
+                $('.feedback-tab').eq(curIndex).fadeIn(200);
+            }
+        }
+        e.preventDefault();
+    });
+
+    $('.feedback-result-header-text').click(function(e) {
+        $(this).parents().filter('.feedback-result').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('resize', function() {
@@ -197,10 +220,16 @@ $(window).on('resize', function() {
     $('.form-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
 });
 
+var dateFormat = 'dd.mm.yy';
+
 function initForm(curForm) {
     curForm.find('input.maskPhone').mask('+7 (999) 999-99-99');
 
     curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
+
+    curForm.find('.form-input-date input').datepicker({
+        dateFormat: dateFormat
+    });
 
     curForm.find('.form-file input').change(function() {
         var curInput = $(this);
