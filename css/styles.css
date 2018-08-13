@@ -452,10 +452,11 @@ nav ul li.active ul li a::after {display:none}
 .main-info-list {text-align:center; font-weight:500; padding:21px 0 35px 0}
 .main-info-list::after {content:""; display:block; clear:both}
 .main-info-item {float:left; width:33.33%; padding:0 40px}
-.main-info-item a {display:block}
+.main-info-item a {display:block; text-decoration:none}
 .main-info-item-icon {line-height:120px}
 .main-info-item-icon img {vertical-align:middle}
 .main-info-item-title {padding:14px 0 0 0}
+.main-info-item-title span {border-bottom:1px solid #cad8dc}
 
 @media screen and (max-width:1169px) {
     .main-info {margin-bottom:-70px}
@@ -689,7 +690,6 @@ h3+.contacts-data {margin-top:24px}
 
 @media screen and (max-width:767px) {
     .results-menu {line-height:30px; margin-top:0}
-    .results-menu ul li {margin:30px 0}
     .results-menu ul li:first-child {margin-top:0}
 }
 
