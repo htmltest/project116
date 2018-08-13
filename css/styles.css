@@ -56,6 +56,13 @@ blockquote h4 {margin:0}
 p+.list-mini {margin-top:-24px}
 .list-mini li {margin:0}
 
+@media screen and (max-width:767px) {
+    h3 {margin:32px 0 24px 0}
+    h3+h4 {margin-top:-7px}
+    li ul {padding:0 0 0 4px}
+    li ol {padding:0; margin-left:-4px}
+}
+
 .wrapper table {margin:0 0 24px 0; width:100%; border-collapse:collapse}
 .wrapper th {text-align:left; vertical-align:top; padding:19px 15px 18px 15px; font-weight:bold; font-size:14px; line-height:17px; text-transform:uppercase}
 .wrapper td {text-align:left; vertical-align:top; padding:19px 15px 18px 15px; border-top:1px solid #f3f3f3}
@@ -335,7 +342,6 @@ nav ul li.active ul li a::after {display:none}
 .main-events-item-preview img {display:block; width:100%}
 .main-events-item-preview+.main-events-item-content {margin:0 0 0 244px}
 .main-events-item-title {font-weight:500; font-size:18px; line-height:24px}
-.main-events-item-date {font-weight:normal; color:#b6b6bc; padding:12px 0 0 0}
 .main-events-item-anonce {padding:9px 0 0 0}
 .main-events-item-anonce p:first-child {margin-top:0}
 .main-events-item-anonce p:last-child {margin-bottom:0}
@@ -349,6 +355,9 @@ nav ul li.active ul li a::after {display:none}
 .main-events-item-anonce ol:last-child li:last-child {margin-bottom:0}
 .main-events-more {margin:27px 0 0 244px; width:200px}
 
+.main-events-item .event-info {margin:12px 0 0 0}
+.main-events-item .event-info-mobile {display:none}
+
 @media screen and (max-width:1169px) {
     .main {padding:25px 0 0 0}
     .main-inner {margin:0}
@@ -358,9 +367,14 @@ nav ul li.active ul li a::after {display:none}
 
 @media screen and (max-width:767px) {
     .main {padding:30px 0 0 0}
+    .main-events-inner {padding-bottom:35px}
     .main-events-item-preview {float:none; width:auto}
     .main-events-item-preview+.main-events-item-content {margin:15px 0 0 0}
+    .main-events-item .event-info {display:none}
+    .main-events-item .event-info-mobile {display:block; margin:14px 0 6px 0}
+    .main-events-item-date {display:none}
     .main-events-more {margin:27px auto 0 auto}
+    .main-events-item-anonce {padding:15px 0 0 0}
 }
 
 .main-title {font:24px/36px Arkhip, sans-serif; text-transform:uppercase}
@@ -386,8 +400,9 @@ nav ul li.active ul li a::after {display:none}
 }
 
 @media screen and (max-width:767px) {
-    .main-side-item {float:none; width:auto; margin:25px 0 0 0}
+    .main-side-item {float:none; width:auto; margin:25px 0 0 0; padding-bottom:35px; padding-left:35px; padding-right:35px}
     .main-side-item:first-child {float:none; margin:25px 0 0 0}
+    .main-contacts-map img {width:100%}
 }
 
 .side-magazines {font-weight:normal; margin:-12px 0 0 0}
@@ -395,7 +410,8 @@ nav ul li.active ul li a::after {display:none}
 .side-magazines-all {width:200px; margin:-3px 0 0 0}
 
 @media screen and (max-width:1169px) {
-    .side-magazines-all {margin:49px 0 0 0}
+    .side-magazine {font-weight:300; margin:20px 0}
+    .side-magazines-all {margin:27px 0 0 0}
 }
 
 .main-side-webinars {line-height:0; padding:9px 0 24px 0}
@@ -427,6 +443,11 @@ nav ul li.active ul li a::after {display:none}
 .main-anonces-list-inner .slick-next:hover {background-color:#6fc0b4}
 .main-anonces-archive {padding:34px 0 0 0; width:200px; margin:0 auto}
 
+@media screen and (max-width:767px) {
+    .main-anonces-item-inner a {padding:0 35px 29px 35px}
+    .main-anonces .main-title {margin-left:35px}
+}
+
 .main-info {background:#fff; margin:34px 0 -45px 0; padding:36px 0 0 0}
 .main-info-list {text-align:center; font-weight:500; padding:21px 0 35px 0}
 .main-info-list::after {content:""; display:block; clear:both}
@@ -452,6 +473,11 @@ nav ul li.active ul li a::after {display:none}
 .breadcrumbs a {text-decoration:none; color:#8c8c91; border-bottom:1px solid #d8dbdc}
 .breadcrumbs a:hover {border-bottom:none}
 
+@media screen and (max-width:767px) {
+    .breadcrumbs {color:#b6b6bc}
+    .breadcrumbs a {color:#b6b6bc}
+}
+
 .content {background:#fff; padding:36px 80px; margin:17px 0 0 0; word-wrap:break-word; overflow-wrap:break-word}
 .content::after {content:""; display:block; clear:both}
 .content:first-child {margin:35px 0 0 0}
@@ -473,7 +499,7 @@ nav ul li.active ul li a::after {display:none}
 .event-info-tags a:hover {text-decoration:none}
 
 @media screen and (max-width:767px) {
-    .event-info {display:table}
+    .events .event-info {display:table}
     .event-info-date {display:table-cell; vertical-align:top; white-space:nowrap}
     .event-info-tags {display:table-cell; vertical-align:top; padding:0 0 0 42px; position:relative}
     .event-info-tags::before {position:absolute; margin:0; left:18px; top:5px}
@@ -546,7 +572,7 @@ nav ul li.active ul li a::after {display:none}
     .leaders-item:first-child {margin-top:0}
     .leaders-item-photo {float:none}
     .leaders-item-content {margin:17px 0 0 0}
-    .leaders-item-detail {margin-top:0}
+    .leaders-item-detail {margin-top:0; margin-bottom:0}
 }
 
 .structure {margin:-7px -30px 0 -30px; text-align:center}
@@ -562,7 +588,7 @@ nav ul li.active ul li a::after {display:none}
 @media screen and (max-width:767px) {
     .structure {margin:0 -20px}
     .structure-row {display:block; margin:25px 0}
-    .structure-item {display:table; width:100%; margin:25px 0; padding:0; height:auto}
+    .structure-item {display:table; width:100%; margin:25px 0; padding:0; height:auto; border-spacing:0; border-collapse:collapse}
     .structure-item-main {margin:25px 0 35px 0}
     .structure-item-inner {display:table-cell; vertical-align:middle; padding:0 5px; height:138px}
     .structure-item h4 {line-height:17px}
@@ -595,6 +621,10 @@ h3+.contacts-data {margin-top:24px}
 .docs-item-icon {float:left; width:35px; line-height:0; text-align:center; padding:5px 0 0 0}
 .docs-item-icon+.docs-item-title {margin:0 0 0 48px}
 .docs-item-title {font-weight:normal}
+
+@media screen and (max-width:767px) {
+    .docs-title {margin-right:-5px}
+}
 
 .vacancy {margin:18px 0}
 .vacancy-header {display:block; background:#e0e8ea; padding:30px 165px 30px 18px; text-decoration:none; color:#000; font-weight:bold; text-transform:uppercase; position:relative; transition:all 0.2s}
@@ -658,8 +688,9 @@ h3+.contacts-data {margin-top:24px}
 .results-menu ul li.active a {color:#e70535; border-bottom:none}
 
 @media screen and (max-width:767px) {
-    .results-menu {line-height:30px}
+    .results-menu {line-height:30px; margin-top:0}
     .results-menu ul li {margin:30px 0}
+    .results-menu ul li:first-child {margin-top:0}
 }
 
 .results-tab {display:none}
@@ -700,18 +731,26 @@ h3+.contacts-data {margin-top:24px}
 .gallery .slick-dots li button:hover {color:#e70535}
 .gallery .slick-dots li.slick-active button {color:#fff; background:#6fc0b4}
 
+@media screen and (max-width:767px) {
+    .gallery .slick-prev {left:0; margin-left:0}
+    .gallery .slick-next {right:0; margin-right:0}
+    .gallery .slick-dots {left:0; margin-left:0; width:auto; right:0}
+}
+
 .webinar-header {margin:48px 0 24px 0}
 .webinar-header::after {content:""; display:block; clear:both}
 .webinar-header-text {float:left; max-width:calc(100% - 332px)}
 .webinar-header-text h3 {margin:0; text-transform:uppercase}
 .webinar-header-text h4 {margin:10px 0 0 0; color:#e70535}
 .webinar-header-link {float:right; width:302px; border:2px solid #6fc0b4; text-decoration:none; height:50px; color:#6fc0b4; text-align:center; text-transform:uppercase; font:bold 14px/46px GothamPro, sans-serif; letter-spacing:0; -webkit-appearance:none; cursor:pointer; transition:all 0.2s}
-.webinar-header-link:hover {color:#2c6573; border-color:#2c6573}
-.webinar-header-link:active {color:#123a44; border-color:#123a44}
+@media screen and (min-width:1170px) {
+    .webinar-header-link:hover {color:#2c6573; border-color:#2c6573}
+    .webinar-header-link:active {color:#123a44; border-color:#123a44}
+}
 
 @media screen and (max-width:767px) {
     .webinar-header-text {float:none; max-width:none}
-    .webinar-header-link {float:none; display:block; margin:25px 0}
+    .webinar-header-link {float:none; display:block; margin:25px 0; width:100%}
 }
 
 .webinars-list-mobile-title {display:none}
@@ -727,6 +766,7 @@ h3+.contacts-data {margin-top:24px}
     .webinars-list-mobile-title {display:block; font-weight:bold; font-size:12px; line-height:24px; text-transform:uppercase; padding:0 0 8px 0; float:left; width:120px}
     .wrapper .webinars-list .table tr td:first-child .webinars-list-mobile-title {float:none; width:auto}
     .webinars-list-mobile-text {margin:0 0 0 135px}
+    .webinars-history-year {margin-top:-6px; margin-bottom:-10px}
 }
 
 .webinars-forms {margin:24px 0 72px 0}
@@ -809,10 +849,12 @@ h3+.contacts-data {margin-top:24px}
 
 @media screen and (max-width:767px) {
     .profit-header-title {margin:0 130px 0 0}
-    .profit-header-date {margin:0 130px 0 0}
-    .profit-header-download {text-align:center}
+    .profit-header-date {margin:0 130px 0 0; padding:6px 0 0 0}
+    .profit-header-download {text-align:center; top:15px}
     .profit-header-download img {float:none; margin:0 auto}
-    .profit-header-download span {display:block; float:none; margin:-5px 0 0 0; text-align:center}
+    .profit-header-download span {display:block; float:none; margin:-5px 0 0 0; text-align:center; font-size:14px}
+    .profit-header-text {padding:23px 30px 17px 30px}
+    .profit-header-text::after {margin-top:0; top:37px}
 }
 
 .content-search-form form {margin:48px 0}
