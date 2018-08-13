@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
 
         <meta name="viewport" content="width=device-width" />
     </head>
@@ -24,6 +25,8 @@
                         <div class="logo"><a href="#"></a></div>
 
                         <div class="lang">RU <a href="#">EN</a></div>
+
+                        <a href="#" class="mobile-menu-link"></a>
 
                         <div class="header-btn"><a href="#" class="btn-2">Электронное обращение</a></div>
                     </div>
@@ -120,43 +123,45 @@
                             <a href="#" class="webinar-header-link">Задать вопрос о вебинарах</a>
                         </div>
 
-                        <div class="table">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th style="width:40%">Тема вебинара</th>
-                                        <th style="width:25%">дата вебинара</th>
-                                        <th style="width:20%">время проведения</th>
-                                        <th style="width:15%">стоимомть</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><a href="#">Практические рекомендации по заполнению отчетных форм в Федеральной системе мониторинга результативности научной деятельности организаций (ФСМНО)</a></td>
-                                        <td>29 мая 2018 г.,<br /> вторник; 31 мая 2018 г.,<br /> четверг (даты на выбор)</td>
-                                        <td>11:00–12:00 МСК</td>
-                                        <td>3500 рублей</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Таможенный кодекс Евразийского экономического союза и проект федерального закона «О таможенном регулировании»: текущее состояние дел, новеллы, дальнейшие шаги</a></td>
-                                        <td>6 июня 2018 г., среда</td>
-                                        <td>12:00–13:00 МСК</td>
-                                        <td>3500 рублей</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Заполнение форм ежегодной отчетности ЦКП и УНУ на портале ckp-rf.ru</a></td>
-                                        <td>7 июня 2018 г., четверг</td>
-                                        <td>12:00–13:00 МСК</td>
-                                        <td>3500 рублей</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Способы и инструменты подбора научного издания с учетом его показателей в международных базах публикаций: рекомендации для авторов</a></td>
-                                        <td>15 июня 2018 г., пятница</td>
-                                        <td>12:00–13:00 МСК</td>
-                                        <td>3500 рублей</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="webinars-list">
+                            <div class="table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width:40%">Тема вебинара</th>
+                                            <th style="width:25%">дата вебинара</th>
+                                            <th style="width:20%">время проведения</th>
+                                            <th style="width:15%">стоимомть</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="webinars-list-mobile-title">Тема вебинара</div><a href="#">Практические рекомендации по заполнению отчетных форм в Федеральной системе мониторинга результативности научной деятельности организаций (ФСМНО)</a></td>
+                                            <td><div class="webinars-list-mobile-title">дата вебинара</div><div class="webinars-list-mobile-text">29 мая 2018 г.,<br /> вторник; 31 мая 2018 г.,<br /> четверг (даты на выбор)</div></td>
+                                            <td><div class="webinars-list-mobile-title">время проведения</div><div class="webinars-list-mobile-text">11:00–12:00 МСК</div></td>
+                                            <td><div class="webinars-list-mobile-title">стоимомть</div><div class="webinars-list-mobile-text">3500 рублей</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="webinars-list-mobile-title">Тема вебинара</div><a href="#">Таможенный кодекс Евразийского экономического союза и проект федерального закона «О таможенном регулировании»: текущее состояние дел, новеллы, дальнейшие шаги</a></td>
+                                            <td><div class="webinars-list-mobile-title">дата вебинара</div><div class="webinars-list-mobile-text">6 июня 2018 г., среда</div></td>
+                                            <td><div class="webinars-list-mobile-title">время проведения</div><div class="webinars-list-mobile-text">12:00–13:00 МСК</div></td>
+                                            <td><div class="webinars-list-mobile-title">стоимомть</div><div class="webinars-list-mobile-text">3500 рублей</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="webinars-list-mobile-title">Тема вебинара</div><a href="#">Заполнение форм ежегодной отчетности ЦКП и УНУ на портале ckp-rf.ru</a></td>
+                                            <td><div class="webinars-list-mobile-title">дата вебинара</div><div class="webinars-list-mobile-text">7 июня 2018 г., четверг</div></td>
+                                            <td><div class="webinars-list-mobile-title">время проведения</div><div class="webinars-list-mobile-text">12:00–13:00 МСК</div></td>
+                                            <td><div class="webinars-list-mobile-title">стоимомть</div><div class="webinars-list-mobile-text">3500 рублей</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="webinars-list-mobile-title">Тема вебинара</div><a href="#">Способы и инструменты подбора научного издания с учетом его показателей в международных базах публикаций: рекомендации для авторов</a></td>
+                                            <td><div class="webinars-list-mobile-title">дата вебинара</div><div class="webinars-list-mobile-text">15 июня 2018 г., пятница</div></td>
+                                            <td><div class="webinars-list-mobile-title">время проведения</div><div class="webinars-list-mobile-text">12:00–13:00 МСК</div></td>
+                                            <td><div class="webinars-list-mobile-title">стоимомть</div><div class="webinars-list-mobile-text">3500 рублей</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <!-- webinars forms -->
@@ -304,6 +309,8 @@
         <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
         <script src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

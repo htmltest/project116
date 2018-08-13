@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
         <link rel="stylesheet" href="js/chosen/chosen.css" />
         <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
 
         <meta name="viewport" content="width=device-width" />
     </head>
@@ -24,6 +25,8 @@
                         <div class="logo"><a href="#"></a></div>
 
                         <div class="lang">RU <a href="#">EN</a></div>
+
+                        <a href="#" class="mobile-menu-link"></a>
 
                         <div class="header-btn"><a href="#" class="btn-2">Электронное обращение</a></div>
                     </div>
@@ -81,67 +84,93 @@
                         <div class="structure">
                             <div class="structure-row">
                                 <a href="#" class="structure-item structure-item-main">
-                                    <h3>Дирекция</h3>
+                                    <div class="structure-item-inner">
+                                        <h3>Дирекция</h3>
+                                    </div>
                                 </a>
                             </div>
                             <div class="structure-row">
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел проблем научно-технологической политики и&nbsp;развития науки</h4>
-                                    <p>Руководитель: Парфенова С. Л.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел проблем научно-технологической политики и&nbsp;развития науки</h4>
+                                        <p>Руководитель: Парфенова С. Л.</p>
+                                    </div>
                                 </a>
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел проблем глобализации и&nbsp;международного сотрудничества в&nbsp;сфере науки и инноваций</h4>
-                                    <p>Руководитель: Ширяев А. А.</p>
-                                </a>
-                            </div>
-                            <div class="structure-row">
-                                <a href="#" class="structure-item">
-                                    <h4>Отдел проблем инновационной политики и&nbsp;развития национальной инновационной системы</h4>
-                                    <p>Руководитель: Гусев А. Б.</p>
-                                </a>
-                                <a href="#" class="structure-item">
-                                    <h4>Отдел анализа и&nbsp;прогноза развития научно-технологического комплекса</h4>
-                                    <p>Руководитель: Ильина И. Е.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел проблем глобализации и&nbsp;международного сотрудничества в&nbsp;сфере науки и инноваций</h4>
+                                        <p>Руководитель: Ширяев А. А.</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="structure-row">
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел мониторинга и&nbsp;оценки развития сферы науки и&nbsp;инноваций</h4>
-                                    <p>Руководитель: Ушакова С. Е.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел проблем инновационной политики и&nbsp;развития национальной инновационной системы</h4>
+                                        <p>Руководитель: Гусев А. Б.</p>
+                                    </div>
                                 </a>
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел проблем развития информационной среды и&nbsp;инфраструктуры науки</h4>
-                                    <p>Руководитель: Калюжный К. А.</p>
-                                </a>
-                            </div>
-                            <div class="structure-row">
-                                <a href="#" class="structure-item">
-                                    <h4>Отдел проблем интеграции науки и&nbsp;образования</h4>
-                                    <p>Руководитель: Ушакова С. Е.</p>
-                                </a>
-                                <a href="#" class="structure-item">
-                                    <h4>Отдел анализа и развития ФСМНО</h4>
-                                    <p>Руководитель: Доронина Е. Г.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел анализа и&nbsp;прогноза развития научно-технологического комплекса</h4>
+                                        <p>Руководитель: Ильина И. Е.</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="structure-row">
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел правовых исследований</h4>
-                                    <p>Руководитель: Сергеева О. Л.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел мониторинга и&nbsp;оценки развития сферы науки и&nbsp;инноваций</h4>
+                                        <p>Руководитель: Ушакова С. Е.</p>
+                                    </div>
                                 </a>
                                 <a href="#" class="structure-item">
-                                    <h4>Информационно-издательский отдел</h4>
-                                    <p>Руководитель: Козловцева Л. А.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел проблем развития информационной среды и&nbsp;инфраструктуры науки</h4>
+                                        <p>Руководитель: Калюжный К. А.</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="structure-row">
                                 <a href="#" class="structure-item">
-                                    <h4>Отдел кадров</h4>
-                                    <p>Руководитель: Макеева Н. Ю.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел проблем интеграции науки и&nbsp;образования</h4>
+                                        <p>Руководитель: Ушакова С. Е.</p>
+                                    </div>
                                 </a>
                                 <a href="#" class="structure-item">
-                                    <h4>Финансовый отдел – бухгалтерия</h4>
-                                    <p>Руководитель: Макеева Н. Ю.</p>
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел анализа и развития ФСМНО</h4>
+                                        <p>Руководитель: Доронина Е. Г.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="structure-row">
+                                <a href="#" class="structure-item">
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел правовых исследований</h4>
+                                        <p>Руководитель: Сергеева О. Л.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="structure-item">
+                                    <div class="structure-item-inner">
+                                        <h4>Информационно-издательский отдел</h4>
+                                        <p>Руководитель: Козловцева Л. А.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="structure-row">
+                                <a href="#" class="structure-item">
+                                    <div class="structure-item-inner">
+                                        <h4>Отдел кадров</h4>
+                                        <p>Руководитель: Макеева Н. Ю.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="structure-item">
+                                    <div class="structure-item-inner">
+                                        <h4>Финансовый отдел – бухгалтерия</h4>
+                                        <p>Руководитель: Макеева Н. Ю.</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -196,6 +225,8 @@
         <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
         <script src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>

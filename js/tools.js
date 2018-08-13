@@ -23,6 +23,8 @@ $(document).ready(function() {
                 }
             }
         ]
+    }).on('beforeChange', function(slick) {
+        $(window).trigger('resize');
     });
 
     $(window).on('load resize', function() {
@@ -211,6 +213,21 @@ $(document).ready(function() {
     $('.feedback-result-header-text').click(function(e) {
         $(this).parents().filter('.feedback-result').toggleClass('open');
         e.preventDefault();
+    });
+
+    $('.personnel-filter, .table').jScrollPane({autoReinitialise: true});
+
+    $('.mobile-menu-link').click(function(e) {
+        $('html').toggleClass('mobile-menu-open');
+        e.preventDefault();
+    });
+
+    $('nav ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (curLi.find('ul').length > 0) {
+            curLi.toggleClass('open');
+            e.preventDefault();
+        }
     });
 
 });
