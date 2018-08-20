@@ -73,22 +73,22 @@ $(document).ready(function() {
         });
     }
 
-    $('.events-filter-all').click(function(e) {
+    $('body').on('click', '.events-filter-all', function(e) {
         $('.events-filter-types input').prop('checked', true);
         e.preventDefault();
     });
 
-    $('.events-filter-clear').click(function(e) {
+    $('body').on('click', '.events-filter-clear', function(e) {
         $('.events-filter-types input').prop('checked', false);
         e.preventDefault();
     });
 
-    $('.vacancy-header').click(function(e) {
+    $('body').on('click', '.vacancy-header', function(e) {
         $(this).parents().filter('.vacancy').toggleClass('open');
         e.preventDefault();
     });
 
-    $('.results-menu ul li a').click(function(e) {
+    $('body').on('click', '.results-menu ul li a', function(e) {
         var curLi = $(this).parent();
         if (!curLi.hasClass('active')) {
             $('.results-menu ul li.active').removeClass('active');
@@ -144,13 +144,13 @@ $(document).ready(function() {
         initForm($(this));
     });
 
-    $('.webinar-header-link').click(function(e) {
+    $('body').on('click', '.webinar-header-link', function(e) {
         $('html, body').animate({'scrollTop': $('.webinars-forms').offset().top - 24});
         $('.webinars-forms-menu li:first a').trigger('click');
         e.preventDefault();
     });
 
-    $('.webinars-forms-menu li a').click(function(e) {
+    $('body').on('click', '.webinars-forms-menu li a', function(e) {
         var curLi = $(this).parent();
         $('.webinars-form').stop(true, true);
         if (curLi.hasClass('active')) {
@@ -171,28 +171,28 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.webinars-form-all').click(function(e) {
+    $('body').on('click', '.webinars-form-all', function(e) {
         $('.webinars-form-items input').prop('checked', true).trigger('change');
         e.preventDefault();
     });
 
-    $('.webinars-form-clear').click(function(e) {
+    $('body').on('click', '.webinars-form-clear', function(e) {
         $('.webinars-form-items input').prop('checked', false).trigger('change');
         e.preventDefault();
     });
 
-    $('.webinars-form-items input').change(function() {
+    $('body').on('change', '.webinars-form-items input', function() {
         recalcWebinars();
     });
 
     recalcWebinars();
 
-    $('.profit-header-text').click(function(e) {
+    $('body').on('click', '.profit-header-text', function(e) {
         $(this).parents().filter('.profit').toggleClass('open');
         e.preventDefault();
     });
 
-    $('.feedback-menu ul li a').click(function(e) {
+    $('body').on('click', '.feedback-menu ul li a', function(e) {
         var curLi = $(this).parent();
         if (!curLi.hasClass('active')) {
             $('.feedback-menu ul li.active').removeClass('active');
@@ -210,7 +210,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.feedback-result-header-text').click(function(e) {
+    $('body').on('click', '.feedback-result-header-text', function(e) {
         $(this).parents().filter('.feedback-result').toggleClass('open');
         e.preventDefault();
     });
